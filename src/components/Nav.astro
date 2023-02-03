@@ -1,0 +1,27 @@
+---
+import navData from "../data/navData";
+---
+
+<nav class="flex justify-between container mx-auto m-2 p-2">
+  <div class="logo align-middle p-2">
+    <h1>Astro Blog</h1>
+  </div>
+  <div class="navbar align-middle">
+    <ul class="flex">
+      {
+        navData.map((link) => (
+          <li class="mx-4 p-2">
+            <a href="{link.path}" class="hover:text-blue-600">
+              {link.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div
+    class="login align-middle text-white bg-blue-600 p-2 hover:text-blue-600 hover:bg-white border border-blue-600 rounded"
+  >
+    <a href="#">Login</a>
+  </div>
+</nav>
